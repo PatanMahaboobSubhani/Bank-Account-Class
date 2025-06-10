@@ -41,3 +41,15 @@ public class BankAccount {
         System.out.println("Current Balance: ₹" + balance);
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("9876543210", "Subhani", 1000.0);
+
+        account.displayBalance();
+        account.deposit(500);
+        account.withdraw(200);
+        account.withdraw(2000); // Should trigger "Insufficient balance"
+        account.displayBalance();
+    }
+}
